@@ -33,8 +33,7 @@ jobs:
               run: |
                 pwd
                 ls -R
-                pip install -U jupyter-book
-                jupyter-book clean .
+                pip install jupyter-book==0.15.1  # Force the stable legacy version                jupyter-book clean .
                 jupyter-book build .
     
             # Save the build output as artifacts (to be reused in deploy stage)
