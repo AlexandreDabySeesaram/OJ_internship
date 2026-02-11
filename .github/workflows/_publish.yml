@@ -34,9 +34,8 @@ jobs:
                 pwd
                 ls -R
                 pip install -U jupyter-book
-                jupyter-book clean .
-                jupyter-book build .
-    
+                jupyter-book build . --config _config.yml
+
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
               uses: actions/upload-artifact@v4
