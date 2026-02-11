@@ -31,6 +31,7 @@ jobs:
 
             - name: Install and build Jupyter Book
               run: |
+                pwd
                 ls -R
                 pip install -U jupyter-book
                 jupyter-book clean .
