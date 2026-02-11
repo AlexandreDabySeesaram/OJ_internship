@@ -26,7 +26,7 @@ jobs:
             - name: Set up Python
               uses: actions/setup-python@v5
               with:
-                python-version: '3.12'
+                python-version: '3.11'
 
 
             - name: Install and build Jupyter Book
@@ -34,8 +34,9 @@ jobs:
                 pwd
                 ls -R
                 pip install -U jupyter-book
-                jupyter-book build . --config _config.yml
-
+                jupyter-book clean .
+                jupyter-book build .
+    
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
               uses: actions/upload-artifact@v4
