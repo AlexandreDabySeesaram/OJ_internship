@@ -36,7 +36,9 @@ dependencies:
   - pip
   - pip:
   # computing stuff
+    - ngsolve
     - gmsh
+    - tqdm
     - meshio
     - matplotlib
     - "pyvista[jupyter]"
